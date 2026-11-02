@@ -1,6 +1,12 @@
-# Collection ManaBox
+# Collection (ManaBox, Archidekt, Moxfield)
 
-L'utilisateur peut joindre l'export CSV de sa collection ManaBox (onglet Collection, menu en haut à droite, Export, CSV). Il n'existe pas d'API : l'export est à joindre à chaque conversation. Lis-le toujours avec le script, jamais à la main.
+L'utilisateur peut joindre l'export CSV de sa collection. Trois formats sont reconnus automatiquement par le script, chacun validé par un export réel :
+
+- **ManaBox** (onglet Collection, menu en haut à droite, Export, CSV) : classeurs, listes d'envies (ignorées) et proxies (colonne Proxy).
+- **Archidekt** (Collection, Export, CSV ; garder les champs par défaut, Oracle ID en plus si possible) : ni classeurs ni listes dans l'export ; pas de champ proxy : une **étiquette** (« Collection labels ») dont le nom contient « proxy » marque un proxy.
+- **Moxfield** (Collection, export CSV) : pas de classeurs dans l'export ; un proxy est une carte marquée **« Playtest Card »**. Pas d'identifiant Scryfall : le script retrouve chaque carte par son édition et son numéro (à défaut par son nom) ; une carte introuvable est signalée.
+
+Il n'existe pas d'API : l'export est à joindre à chaque conversation. Lis-le toujours avec le script, jamais à la main. **Bon à savoir pour une migration** (constaté le 02/11) : Moxfield refuse le CSV de ManaBox mais accepte celui d'Archidekt ; un import fait perdre les classeurs et transforme les listes d'envies en cartes possédées, et l'import Archidekt → Moxfield a perdu les quantités et une carte. Si l'utilisateur vient de migrer, signale ces risques en une phrase.
 
 ## Ce que veut dire « posséder une carte »
 
@@ -15,7 +21,7 @@ Une carte est **possédée dès qu'il en existe au moins un exemplaire réel** d
 - `python scripts/collection.py <export.csv> check <deck.txt>` : les cartes du deck déjà possédées, puis **un seul total des cartes manquantes**, détaillé en deux parties (déjà jouées en proxy ; ni possédées ni en proxy), avec le coût approximatif de l'ensemble.
 - Options : `--only-binders "Commun" "Prénom"` et `--exclude-binders "Nom"` (plusieurs noms à la suite), `--proxies-possedes`. **Classeurs à compter** : ceux de `collection.classeurs` dans le profil, sans poser la question (`--only-binders` avec ces noms). Le classeur au nom d'une autre personne ne lui appartient pas : si l'export contient des classeurs absents du profil, demande lesquels compter avant de commencer. Les listes ManaBox (listes d'envies) sont toujours ignorées.
 
-Le nom Scryfall de chaque carte vient de l'identifiant d'impression de l'export : peu importe la langue de ses cartes, la liste livrée reste en noms anglais.
+Le nom Scryfall de chaque carte vient de l'identifiant d'impression de l'export (ou, pour Moxfield, de son édition et de son numéro) : peu importe la langue de ses cartes, la liste livrée reste en noms anglais. **Classeurs** : seulement avec ManaBox ; avec Archidekt et Moxfield, toutes les lignes comptent et le script le dit (les options de classeurs sont ignorées).
 
 ## Quand faire le contrôle
 

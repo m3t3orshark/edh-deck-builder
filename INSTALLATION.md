@@ -54,7 +54,7 @@ Dis **« aide EDH »** à tout moment : Claude affiche la liste de ce que tu peu
 
 - « Monte-moi un deck avec Atraxa, bracket 2 »
 - « Analyse ce deck » (en collant ta liste ou en joignant le fichier)
-- « Seulement avec mes cartes » (en joignant ton export ManaBox)
+- « Seulement avec mes cartes » (en joignant l'export de ta collection : ManaBox, Archidekt ou Moxfield)
 - « Est-ce que [carte] se déclenche avec [carte] ? »
 - « Prépare les notes de jeu »
 

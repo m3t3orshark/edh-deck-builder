@@ -31,7 +31,7 @@ Un domaine ajouté peut mettre quelques messages à fonctionner. Si Claude indiq
 | Trouver des cartes | « Quelles cartes vont avec [commandant] ? » |
 | Analyser ou améliorer un deck | « Analyse ce deck » (avec la liste) ; « Pourquoi mon deck perd ? » |
 | Améliorer un precon | « Améliore seulement la base de mana, 10 échanges maximum » |
-| Utiliser ma collection | « Seulement avec mes cartes » (avec l'export ManaBox) ; « Fais le bilan de ma collection pour ce deck » |
+| Utiliser ma collection | « Seulement avec mes cartes » (avec l'export de ta collection : ManaBox, Archidekt ou Moxfield) ; « Fais le bilan de ma collection pour ce deck » |
 | Jouer | « Prépare les notes de jeu » ; « Est-ce que [carte] se déclenche avec [carte] ? » |
 | Mes réglages | « Règle mon profil EDH » ; « Exporte mon profil EDH » |
 | Entretien | « Y a-t-il une mise à jour EDH ? » ; « Fais la mise à jour EDH » ; « Mets à jour mon skill avec ce fichier » ; « Prépare une copie vierge à partager » |
@@ -151,9 +151,15 @@ Commander
 
 **Dans Archidekt**, même chose : crée un deck Commander et colle la liste dans l'import de texte. Commandant, partenaires et sideboard sont reconnus. Archidekt range lui-même les cartes dans ses catégories de rôle ; réorganise-les à ta guise.
 
-## 9. Utiliser ta collection ManaBox
+## 9. Utiliser ta collection (ManaBox, Archidekt, Moxfield)
 
-Dans ManaBox : onglet **Collection**, menu en haut à droite, **Exporter**, format **CSV**. Joins le fichier à la conversation. Claude indique la date du dernier ajout de l'export, pour que tu saches de quand date la collection comparée.
+Joins à la conversation l'export CSV de ta collection. Claude reconnaît le format tout seul :
+
+- **ManaBox** : onglet **Collection**, menu en haut à droite, **Exporter**, format **CSV**. Tes classeurs et tes listes d'envies sont reconnus.
+- **Archidekt** : **Collection**, **Export**, format CSV (garde les champs cochés par défaut). Pour marquer un proxy, donne-lui une étiquette (« Collection labels ») nommée par exemple `Proxy`.
+- **Moxfield** : **Collection**, export CSV. Pour marquer un proxy, active **« Playtest Card »** sur la carte.
+
+Archidekt et Moxfield n'exportent pas de classeurs : toute la collection compte. Si tu as migré ta collection d'un outil à l'autre, vérifie-la : un import perd les classeurs, transforme une liste d'envies en cartes possédées, et peut perdre des quantités (Moxfield refuse d'ailleurs le CSV de ManaBox, mais accepte celui d'Archidekt). Claude indique la date du dernier ajout de l'export, pour que tu saches de quand date la collection comparée.
 
 **Construire avec ta collection** : trois options, à préciser dans ta demande (sinon Claude te les propose).
 

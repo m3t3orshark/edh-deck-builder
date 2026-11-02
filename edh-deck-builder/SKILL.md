@@ -1,6 +1,6 @@
 ---
 name: "edh-deck-builder"
-description: Construit, analyse et améliore des decks Magic The Gathering EDH / Commander (100 cartes), livre une liste prête à importer puis, après validation, les notes de jeu. Utilise cette skill dès que l'utilisateur parle de monter, construire ou améliorer un deck Commander/EDH, donne un commandant en demandant un deck, mentionne un bracket, un niveau de puissance ou deckstats, demande des notes ou un plan de jeu, colle une liste existante à analyser ou réviser, pose une question de règles ou d'interaction sur des cartes de ses decks, demande quelles cartes ou synergies vont avec un commandant, propose un thème ou une mécanique et cherche quels commandants l'exploitent, veut voir, modifier ou exporter ses réglages EDH, mettre à jour le skill, demande de l'aide ou la liste des commandes, même sans dire « deck ». In English too: build, review or improve a Commander/EDH deck, brackets, power, play notes, card rules, synergies, commanders for a theme, ManaBox collection, settings, skill update, help.
+description: Construit, analyse et améliore des decks Magic The Gathering EDH / Commander (100 cartes), livre une liste prête à importer puis, après validation, les notes de jeu. Utilise cette skill dès que l'utilisateur parle de monter, construire ou améliorer un deck Commander/EDH, donne un commandant en demandant un deck, mentionne un bracket, un niveau de puissance ou deckstats, demande des notes ou un plan de jeu, colle une liste existante à analyser ou réviser, pose une question de règles ou d'interaction sur des cartes de ses decks, demande quelles cartes ou synergies vont avec un commandant, propose un thème ou une mécanique et cherche quels commandants l'exploitent, veut voir, modifier ou exporter ses réglages EDH, mettre à jour le skill, demande de l'aide ou la liste des commandes, même sans dire « deck ». In English too: build, review or improve a Commander/EDH deck, brackets, power, play notes, card rules, synergies, commanders for a theme, collection exports, settings, skill update, help.
 ---
 
 # Constructeur de decks EDH / Commander
@@ -44,7 +44,7 @@ Lis seulement le module qui correspond à la demande (plusieurs si elle en combi
 | Les notes de jeu d'une liste validée | `modes/notes.md` |
 | Toutes les cartes qui servent un commandant, par synergie | `modes/exploration.md` |
 | Un thème ou une mécanique : quels commandants ? | `modes/commandants.md` |
-| Un export ManaBox joint, « avec mes cartes », ou « qu'est-ce que j'ai déjà ? » sur une liste | `modes/collection.md` |
+| Un export de collection joint (ManaBox, Archidekt, Moxfield), « avec mes cartes », ou « qu'est-ce que j'ai déjà ? » sur une liste | `modes/collection.md` |
 | Voir, modifier ou exporter ses réglages ; mettre à jour le skill, avec un fichier `.skill` joint ou sans (« fais la mise à jour EDH ») | `modes/reglages.md` |
 | « Aide EDH », « que sais-tu faire ? », la liste des commandes | `reference/commandes.md` |
 
@@ -66,7 +66,7 @@ Python 3 sans dépendance, à lancer depuis le dossier du skill. Accès réseau 
 | `search_new_cards.py` | Cartes nouvelles depuis une date, par synergie |
 | `synergy_search.py` | Toutes les cartes d'un axe de synergie, ou les commandants d'un thème |
 | `diff_decks.py` | Comparaison origine / révision, contrôle des contraintes |
-| `collection.py` | Lecture d'un export ManaBox, bilan d'une liste (possédées, en proxy seulement, à acquérir) |
+| `collection.py` | Lecture d'un export de collection (ManaBox, Archidekt, Moxfield ; format détecté), bilan d'une liste (possédées, en proxy seulement, à acquérir) |
 | `render_panel.py`, `save_profile.py` | Panneau de réglages et reconstruction du skill avec le nouveau profil |
 
 ## Travailler sur le skill lui-même

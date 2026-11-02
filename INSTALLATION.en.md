@@ -54,7 +54,7 @@ Say **"help EDH"** at any time: Claude shows the list of what you can ask, with 
 
 - "Build me a deck with Atraxa, bracket 2"
 - "Review this deck" (pasting your list or attaching the file)
-- "Only with my cards" (attaching your ManaBox export)
+- "Only with my cards" (attaching your collection export: ManaBox, Archidekt or Moxfield)
 - "Does [card] trigger with [card]?"
 - "Write the play notes"
 

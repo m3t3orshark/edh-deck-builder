@@ -9,7 +9,7 @@ Réponds à « aide EDH » (ou « aide » dans une conversation sur Magic), « q
 | Trouver des cartes | « Quelles cartes vont avec [commandant] ? » |
 | Analyser ou améliorer un deck | « Analyse ce deck » (avec la liste) ; « Pourquoi mon deck perd ? » |
 | Améliorer un precon | « Améliore seulement la base de mana, 10 échanges maximum » |
-| Utiliser ma collection | « Seulement avec mes cartes » (avec l'export ManaBox) ; « Fais le bilan de ma collection pour ce deck » |
+| Utiliser ma collection | « Seulement avec mes cartes » (avec l'export de ta collection : ManaBox, Archidekt ou Moxfield) ; « Fais le bilan de ma collection pour ce deck » |
 | Jouer | « Prépare les notes de jeu » ; « Est-ce que [carte] se déclenche avec [carte] ? » |
 | Mes réglages | « Règle mon profil EDH » ; « Exporte mon profil EDH » |
 | Entretien | « Y a-t-il une mise à jour EDH ? » ; « Fais la mise à jour EDH » ; « Mets à jour mon skill avec ce fichier » ; « Prépare une copie vierge à partager » |
@@ -24,7 +24,7 @@ Réponds à « aide EDH » (ou « aide » dans une conversation sur Magic), « q
 | Find cards | "Which cards go with [commander]?" |
 | Review or improve a deck | "Review this deck" (with the list); "Why does my deck lose?" |
 | Upgrade a precon | "Improve only the mana base, 10 swaps at most" |
-| Use my collection | "Only with my cards" (with the ManaBox export); "Check my collection for this deck" |
+| Use my collection | "Only with my cards" (with your collection export: ManaBox, Archidekt or Moxfield); "Check my collection for this deck" |
 | Play | "Write the play notes"; "Does [card] trigger with [card]?" |
 | My settings | "Set my EDH profile"; "Export my EDH profile" |
 | Maintenance | "Is there an EDH update?"; "Update EDH"; "Update my skill with this file"; "Make a blank copy to share" |

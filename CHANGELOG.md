@@ -1,5 +1,10 @@
 # Nouveautés · What's new
 
+## 2026.11.02.6
+
+- Ta collection peut venir d'Archidekt ou de Moxfield, en plus de ManaBox : joins l'export CSV, le format est reconnu tout seul. Proxies : une étiquette contenant « proxy » dans Archidekt, l'option « Playtest Card » dans Moxfield.
+- *Your collection can come from Archidekt or Moxfield, besides ManaBox: attach the CSV export, the format is recognized automatically. Proxies: a label containing "proxy" in Archidekt, the "Playtest Card" option in Moxfield.*
+
 ## 2026.11.02.5
 
 - Documentation en anglais : présentation, mode d'emploi, guide d'installation et README. Les commandes ont leur forme anglaise (« help EDH », « update EDH », « set my EDH profile »…).

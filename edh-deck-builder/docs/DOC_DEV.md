@@ -177,6 +177,7 @@ Ces règles viennent d'essais réels. Plusieurs suppositions plausibles se sont 
 | Cardmarket inutile | Site protégé (403) ; l'API renvoie vers `apiv2.cardmarket.com` et exige des clés d'application. Les prix passent par Scryfall |
 | Le même bloc s'importe dans ManaBox | Import texte de ManaBox : commandant reconnu, `Sideboard` en réserve (testé le 31/10) |
 | Pas d'API ManaBox | Seul l'export CSV est documenté |
+| Collections Archidekt et Moxfield | Exports réels du 02/11 (collection de l'auteur migrée ManaBox → Archidekt → Moxfield) : formats détectés par les en-têtes ; Archidekt : Scryfall ID, pas de classeurs, proxy = étiquette contenant « proxy » (colonne Tags, vérifié avec une étiquette `Proxy`) ; Moxfield : pas de Scryfall ID (édition + numéro, 1 050 lignes toutes retrouvées), proxy = « Playtest Card » (colonne Proxy, vérifié). Cartes possédées identiques à ManaBox, aux écarts près dus à la migration (liste d'envies devenue possédée, quantités et une carte perdues par Moxfield) et aux proxies marqués |
 | Archidekt accepte le format deckstats tel quel | Test réel du 02/11 (mêmes listes) ; il range les cartes dans ses propres catégories |
 | Moxfield accepte le format deckstats tel quel | Test réel du 02/11 (deux listes, partenaires et cartes à deux faces compris) ; il choisit lui-même l'impression, parfois à nom alternatif |
 | Principes réglés un à un ; profil vierge = règles du bracket | Même deck et même demande (Atraxa, combo à deux cartes, bracket 4) : combo cassée avec `pas_de_combo_infinie` actif, gardée et signalée avec le profil vierge (01/11). La réponse nomme la règle qui impose un retrait |
@@ -192,7 +193,7 @@ Ces règles viennent d'essais réels. Plusieurs suppositions plausibles se sont 
 
 ## 6. Tests de référence
 
-Vingt-quatre cas dans `evals/`, au format lu par `claude plugin eval` (Claude Code) : `prompt.md`, `case.yaml`, `graders/` (un critère par fichier), `files/` si besoin. **Ils supposent le profil de l'auteur** (principes actifs, bracket 2 par défaut, classeurs « Commun » et un classeur personnel, base de mana à six catégories), sauf `profil-vierge-combo-autorisee`, qui se lance sur une copie vierge. Des tests indépendants de tout profil sont prévus (étape 5 de la feuille de route).
+Vingt-six cas dans `evals/`, au format lu par `claude plugin eval` (Claude Code) : `prompt.md`, `case.yaml`, `graders/` (un critère par fichier), `files/` si besoin. **Ils supposent le profil de l'auteur** (principes actifs, bracket 2 par défaut, classeurs « Commun » et un classeur personnel, base de mana à six catégories), sauf `profil-vierge-combo-autorisee`, qui se lance sur une copie vierge. Des tests indépendants de tout profil sont prévus (étape 5 de la feuille de route).
 
 | Cas | Ce qu'il vérifie |
 |---|---|
@@ -213,6 +214,8 @@ Vingt-quatre cas dans `evals/`, au format lu par `claude plugin eval` (Claude Co
 | `partenaires-paire-valide` | Paire Tymna + Kraum vérifiée par le script avant la construction, 100 cartes avec les deux commandants sous `Commander`, identité WUBR, 0 Game Changer, stratégie qui exploite les deux |
 | `profil-vierge-combo-autorisee` | **Sur une copie vierge** (`save_profile.py --vierge`) : accueil bref et analyse sans attendre le panneau ; `atraxa.txt` (Atraxa stun avec Sanguine Bond + Exquisite Blood), bracket 4, aucun pool imposé : combo identifiée, gardée, signalée comme autorisée par le bracket, aucun principe invoqué, aucune question |
 | `profil-principes-combo-retiree` | Pendant du précédent, sur une copie dont le profil active `pas_de_combo_infinie` : même deck, même demande ; combo en tête du diagnostic et cassée au nom du principe, en précisant que le bracket seul l'autoriserait ; aucune nouvelle combo complétée ; aucune question |
+| `collection-archidekt` | Export Archidekt réel joint avec une liste, « qu'est-ce que j'ai déjà ? » : format reconnu par le script, bilan (possédées, manquantes, coût), pas de question sur les classeurs, date de la collection |
+| `collection-moxfield` | Même chose avec un export Moxfield réel (cartes retrouvées par édition et numéro) |
 | `help-edh-anglais` | « Help EDH » (profil en français) : réponse en anglais, tableau anglais de `reference/commandes.md` avec ses formes exactes (« Set my EDH profile », « Update EDH »…) |
 | `aide-liste-commandes` | « Aide » : `reference/commandes.md` lu, exemples regroupés par usage, en français, commandes clés présentes, réponse sobre |
 | `maj-sans-fichier` | « Fais la mise à jour de edh-deck-builder » sans fichier : `check_update.py` lancé, version donnée, « pas encore disponible » avec la méthode par fichier, rien d'inventé |
@@ -359,8 +362,7 @@ Chaque test ci-dessous a été mené dans une conversation neuve, avec la versio
 
 | Changement | Vérification faite | Reste à tester en conversation |
 |---|---|---|
-| `reference/commandes.md` (source unique des exemples de demandes, modifiable ; le mode d'emploi en reprend le tableau), ligne de la table des modules, accueil en trois phrases qui mentionne « aide » | Relecture | `help-edh-anglais` | « Help EDH » (profil en français) : réponse en anglais, tableau anglais de `reference/commandes.md` avec ses formes exactes (« Set my EDH profile », « Update EDH »…) |
-| `aide-liste-commandes` |
+| `reference/commandes.md` (source unique des exemples de demandes, modifiable ; le mode d'emploi en reprend le tableau), ligne de la table des modules, accueil en trois phrases qui mentionne « aide » | Relecture | `aide-liste-commandes` |
 | `check_update.py` (marqueur « À FAIRE (étape 6) » : `SOURCE = None`, il dit que la mise à jour automatique n'est pas encore disponible), section « Sans fichier » de `modes/reglages.md` | Sortie du script vérifiée | `maj-sans-fichier` |
 | Description : aide, liste des commandes, mise à jour sans fichier ; partie anglaise resserrée (1 003 caractères) | Longueur vérifiée | Les deux tests |
 | Tests réels (02/11) : `aide-liste-commandes` 4/4 (fichier lu, tableau complet, une phrase d'introduction) ; `maj-sans-fichier` 4/4 (script lancé, version 2026.11.02.2 donnée, « pas encore disponible », méthode par fichier rappelée, rien d'inventé). Version installée par l'auteur via « mets à jour » | — | — |
@@ -386,6 +388,13 @@ Chaque test ci-dessous a été mené dans une conversation neuve, avec la versio
 | Changement | Vérification faite | Reste à tester en conversation |
 |---|---|---|
 | `docs/README.en.md`, `docs/MODE_EMPLOI.en.md` (13 sections, comme la version française), `README.en.md` et `INSTALLATION.en.md` à la racine, `CHANGELOG.md` bilingue, liens d'une langue à l'autre en tête de chaque page ; formes anglaises fixes des commandes (`reference/commandes.md`, SKILL.md) ; version française de `docs/README.md` corrigée (renvoi vers `A_FAIRE.md`, absent de la copie publique ; domaines GitHub) ; règle des deux langues | Relecture ; sections alignées | `help-edh-anglais` ; carte « Mettre à jour » depuis GitHub (.4 → .5) |
+| **Test réel de la mise à jour automatique** (02/11) : dans le Claude de l'auteur, « Fais la mise à jour EDH » depuis la .4 : release .5 détectée, téléchargement, empreinte vérifiée, notes résumées, réglages et `A_FAIRE.md` gardés, carte « Mettre à jour » présentée. Dépôt au tag : 37/37 fichiers identiques. Hors grille : une phrase de travail du modèle a fui dans la réponse | — | — |
+
+### 2 novembre 2026 : collections Archidekt et Moxfield (version 2026.11.02.6)
+
+| Changement | Vérification faite | Reste à tester en conversation |
+|---|---|---|
+| `collection.py` : détection du format par les en-têtes (`detect_format`), lignes ramenées à un format commun (`read_rows`) ; Archidekt (Scryfall ID, étiquette « proxy ») ; Moxfield (édition + numéro → Scryfall par `/cards/collection`, à défaut le nom ; introuvables signalés ; cache pour ne pas interroger deux fois) ; options de classeurs signalées comme sans objet ; `modes/collection.md`, SKILL.md, liste des commandes, mode d'emploi, présentation et guides d'installation (deux langues), conseils de migration | **Non-régression ManaBox** : ancienne et nouvelle version, 12 sorties identiques sur 12 (deux exports, `summary`, `check` avec et sans options de classeurs et de proxies, `pool`). Trois formats comparés sur la même collection : écarts tous expliqués (liste d'envies, proxies marqués, carte perdue à la migration) | `collection-archidekt`, `collection-moxfield` |
 
 ### Enseignements
 

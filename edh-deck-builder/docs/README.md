@@ -30,7 +30,7 @@ Et un principe de méthode : **rien n'est affirmé de mémoire quand on peut le 
 ## Ce qu'il faut pour l'utiliser
 
 - Claude avec les skills, **l'exécution de code** activée et **l'accès réseau** à `api.scryfall.com`, `backend.commanderspellbook.com` et, pour les mises à jour, aux domaines de GitHub (voir le mode d'emploi, section 1).
-- Pour la collection : l'application **ManaBox** et son export CSV. Pour les listes : un compte **deckstats.net**, **Moxfield** ou **Archidekt**, ou l'application ManaBox (facultatif, la liste reste lisible telle quelle).
+- Pour la collection : l'export CSV de **ManaBox**, **Archidekt** ou **Moxfield**. Pour les listes : un compte **deckstats.net**, **Moxfield** ou **Archidekt**, ou l'application ManaBox (facultatif, la liste reste lisible telle quelle).
 
 ## Ce que le skill sait faire
 
@@ -47,14 +47,14 @@ Et un principe de méthode : **rien n'est affirmé de mémoire quand on peut le 
 | Aide | « Aide EDH » affiche la liste des demandes possibles, avec un exemple pour chacune |
 | Réglages | Un panneau visuel pour tes préférences, enregistré d'un clic ; mise à jour vers une nouvelle version sans perdre ton profil ; export du profil en une ligne |
 | Notes de jeu | Plan de jeu, main de départ, synergies, pièges de règles, combos à éviter |
-| Collection ManaBox | Uniquement mes cartes, en priorité mes cartes, ou meilleur deck puis bilan des achats ; sur demande, comparaison de n'importe quelle liste avec ta collection (possédées, en proxy seulement, à acquérir) |
+| Collection (ManaBox, Archidekt, Moxfield) | Uniquement mes cartes, en priorité mes cartes, ou meilleur deck puis bilan des achats ; sur demande, comparaison de n'importe quelle liste avec ta collection (possédées, en proxy seulement, à acquérir) |
 
 ## Ce qu'il ne fait pas
 
 - Il ne lit pas un lien deckstats (le site bloque les lecteurs automatiques) : il faut coller l'export.
-- Il ne se connecte pas à ManaBox (pas d'API publique) : il faut joindre l'export CSV.
+- Il ne se connecte pas à ta collection (ni ManaBox, ni Archidekt, ni Moxfield n'ont d'API publique) : il faut joindre l'export CSV.
 - Il ne cherche pas dans quel deck se trouvent tes cartes : une carte possédée une fois compte pour tous tes decks, l'autre exemplaire pouvant être un proxy.
-- Il parle **français** ou **anglais**, au choix dans le profil (et il répond dans la langue de tes phrases si tu changes de langue) ; les noms de cartes restent en anglais. La documentation existe en français et en anglais, sauf la documentation développeur (en français). Les prix sont en **euros** (Cardmarket) ou en **dollars** (TCGplayer), au choix dans le profil : ce sont les deux devises que fournit Scryfall, sans conversion vers d'autres. Les listes s'importent dans deckstats, ManaBox, Moxfield et Archidekt ; d'autres outils viendront quand leur import aura été testé. Pour la collection, seul l'export ManaBox est lu.
+- Il parle **français** ou **anglais**, au choix dans le profil (et il répond dans la langue de tes phrases si tu changes de langue) ; les noms de cartes restent en anglais. La documentation existe en français et en anglais, sauf la documentation développeur (en français). Les prix sont en **euros** (Cardmarket) ou en **dollars** (TCGplayer), au choix dans le profil : ce sont les deux devises que fournit Scryfall, sans conversion vers d'autres. Les listes s'importent dans deckstats, ManaBox, Moxfield et Archidekt ; d'autres outils viendront quand leur import aura été testé. Pour la collection, les exports de ManaBox, Archidekt et Moxfield sont lus.
 - Il ne remplace pas ton jugement : il propose, tu valides.
 
 ## Pour aller plus loin

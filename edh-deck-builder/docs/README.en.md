@@ -28,7 +28,7 @@ And one principle of method: **nothing is stated from memory when it can be chec
 ## What you need
 
 - Claude with skills, **code execution** turned on and **network access** to `api.scryfall.com`, `backend.commanderspellbook.com` and, for updates, the GitHub domains (see the user guide, section 1).
-- For your collection: the **ManaBox** app and its CSV export. For lists: a **deckstats.net**, **Moxfield** or **Archidekt** account, or the ManaBox app (optional: the list is readable as is).
+- For your collection: the CSV export from **ManaBox**, **Archidekt** or **Moxfield**. For lists: a **deckstats.net**, **Moxfield** or **Archidekt** account, or the ManaBox app (optional: the list is readable as is).
 
 ## What the skill can do
 
@@ -45,14 +45,14 @@ And one principle of method: **nothing is stated from memory when it can be chec
 | Help | "Help EDH" shows the list of possible requests, with an example for each |
 | Settings | A visual panel for your preferences, saved in one click; update to a new version without losing your profile; profile export in one line |
 | Play notes | Game plan, opening hand, synergies, rules pitfalls, combos to avoid |
-| ManaBox collection | Only my cards, my cards first, or best deck then a shopping list; on request, any list compared with your collection (owned, proxy only, to acquire) |
+| Collection (ManaBox, Archidekt, Moxfield) | Only my cards, my cards first, or best deck then a shopping list; on request, any list compared with your collection (owned, proxy only, to acquire) |
 
 ## What it does not do
 
 - It does not read a deckstats link (the site blocks automated readers): paste the export instead.
-- It does not connect to ManaBox (no public API): attach the CSV export instead.
+- It does not connect to your collection (ManaBox, Archidekt and Moxfield have no public API): attach the CSV export instead.
 - It does not track which deck your cards are in: a card you own once counts for all your decks, the other copy can be a proxy.
-- It speaks **French** or **English**, chosen in the profile (and it answers in the language of your own sentences if you switch); card names stay in English. The documentation exists in French and English, except the developer documentation (French only). Prices are in **euros** (Cardmarket) or **dollars** (TCGplayer), chosen in the profile: those are the two currencies Scryfall provides, with no conversion to others. Lists import into deckstats, ManaBox, Moxfield and Archidekt; other tools will come once their import has been tested. For collections, only the ManaBox export is read.
+- It speaks **French** or **English**, chosen in the profile (and it answers in the language of your own sentences if you switch); card names stay in English. The documentation exists in French and English, except the developer documentation (French only). Prices are in **euros** (Cardmarket) or **dollars** (TCGplayer), chosen in the profile: those are the two currencies Scryfall provides, with no conversion to others. Lists import into deckstats, ManaBox, Moxfield and Archidekt; other tools will come once their import has been tested. For collections, ManaBox, Archidekt and Moxfield exports are read.
 - It does not replace your judgment: it suggests, you decide.
 
 ## Further reading

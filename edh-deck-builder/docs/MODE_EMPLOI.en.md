@@ -31,7 +31,7 @@ At any time, say **"help EDH"**: Claude shows the list of possible requests, wit
 | Find cards | "Which cards go with [commander]?" |
 | Review or improve a deck | "Review this deck" (with the list); "Why does my deck lose?" |
 | Upgrade a precon | "Improve only the mana base, 10 swaps at most" |
-| Use my collection | "Only with my cards" (with the ManaBox export); "Check my collection for this deck" |
+| Use my collection | "Only with my cards" (with your collection export: ManaBox, Archidekt or Moxfield); "Check my collection for this deck" |
 | Play | "Write the play notes"; "Does [card] trigger with [card]?" |
 | My settings | "Set my EDH profile"; "Export my EDH profile" |
 | Maintenance | "Is there an EDH update?"; "Update EDH"; "Update my skill with this file"; "Make a blank copy to share" |
@@ -151,9 +151,15 @@ Commander
 
 **In Archidekt**, likewise: create a Commander deck and paste the list into the text import. Commander, partners and sideboard are recognized. Archidekt sorts the cards into its own role categories; rearrange them as you like.
 
-## 9. Use your ManaBox collection
+## 9. Use your collection (ManaBox, Archidekt, Moxfield)
 
-In ManaBox: **Collection** tab, top-right menu, **Export**, **CSV** format. Attach the file to the conversation. Claude gives the date of the export's latest addition, so you know how recent the compared collection is.
+Attach your collection's CSV export to the conversation. Claude recognizes the format on its own:
+
+- **ManaBox**: **Collection** tab, top-right menu, **Export**, **CSV** format. Your binders and wishlists are recognized.
+- **Archidekt**: **Collection**, **Export**, CSV format (keep the fields checked by default). To mark a proxy, give it a label ("Collection labels") named, for example, `Proxy`.
+- **Moxfield**: **Collection**, CSV export. To mark a proxy, turn on **"Playtest Card"** on the card.
+
+Archidekt and Moxfield don't export binders: the whole collection counts. If you migrated your collection from one tool to another, check it: an import loses binders, turns a wishlist into owned cards, and can lose quantities (Moxfield refuses the ManaBox CSV, but accepts Archidekt's). Claude gives the date of the export's latest addition, so you know how recent the compared collection is.
 
 **Building with your collection**: three options, to state in your request (otherwise Claude offers them).
 
