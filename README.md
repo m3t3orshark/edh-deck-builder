@@ -26,6 +26,12 @@ La documentation est en français ; une version anglaise est prévue. Le skill r
 
 ## Mentions
 
-edh-deck-builder est un contenu de fan non officiel, autorisé dans le cadre de la politique sur le contenu de fans (Fan Content Policy) de Wizards of the Coast. Il n'est ni approuvé ni soutenu par Wizards. Certaines parties des contenus utilisés sont la propriété de Wizards of the Coast. ©Wizards of the Coast LLC. Le dépôt ne contient aucune image ni aucun texte de carte : les données viennent de Scryfall et de Commander Spellbook au moment de l'utilisation.
+edh-deck-builder is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
-Tous droits réservés pour l'instant (pas de licence).
+*En français : edh-deck-builder est un contenu de fan non officiel, autorisé par la politique sur les contenus de fans de Wizards of the Coast. Il n'est ni approuvé ni soutenu par Wizards. Certains des contenus utilisés sont la propriété de Wizards of the Coast. ©Wizards of the Coast LLC.*
+
+Le dépôt ne contient aucune image, aucun logo ni aucun texte de carte : les données des cartes viennent de [Scryfall](https://scryfall.com) et les combos de [Commander Spellbook](https://commanderspellbook.com), interrogés au moment de l'utilisation. Ni Scryfall ni Commander Spellbook n'ont approuvé ce projet.
+
+## Licence
+
+[CC0 1.0](LICENSE) : le code et la documentation sont versés au domaine public. Chacun peut les utiliser, les modifier et les partager librement, sans demander d'autorisation ni citer l'auteur, comme le prévoit la politique sur les contenus de fans.
