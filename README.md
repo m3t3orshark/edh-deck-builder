@@ -4,10 +4,9 @@ Un **skill pour Claude** qui construit, analyse et améliore des decks **Magic: 
 
 ## Installer
 
-1. Dans Claude, **Paramètres → Capacités** : active l'exécution de code et l'accès réseau sortant, puis autorise ces domaines : `api.scryfall.com`, `backend.commanderspellbook.com`, `github.com`, `raw.githubusercontent.com`, `release-assets.githubusercontent.com` (et `objects.githubusercontent.com` si une mise à jour échoue au téléchargement).
-2. Télécharge `edh-deck-builder.skill` dans la dernière version de la page **[Releases](https://github.com/m3t3orshark/edh-deck-builder/releases)** (section *Assets*).
-3. **Personnaliser → Skills → +** : importe ce fichier.
-4. Ouvre une nouvelle conversation et parle de ton deck : le skill t'accueille et te propose de régler tes préférences en une minute.
+Dix minutes, une seule fois : régler Claude (exécution de code, accès réseau, cinq domaines), télécharger `edh-deck-builder.skill` depuis la page **[Releases](https://github.com/m3t3orshark/edh-deck-builder/releases)**, l'importer dans Claude, puis régler tes préférences au premier message.
+
+**[Le guide d'installation pas à pas](INSTALLATION.md)**
 
 ## Utiliser
 
