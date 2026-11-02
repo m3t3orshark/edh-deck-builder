@@ -1,4 +1,9 @@
-# Nouveautés
+# Nouveautés · What's new
+
+## 2026.11.02.5
+
+- Documentation en anglais : présentation, mode d'emploi, guide d'installation et README. Les commandes ont leur forme anglaise (« help EDH », « update EDH », « set my EDH profile »…).
+- *English documentation: overview, user guide, installation guide and README. Commands have English forms ("help EDH", "update EDH", "set my EDH profile"…).*
 
 ## 2026.11.02.4
 

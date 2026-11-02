@@ -1,5 +1,7 @@
 # edh-deck-builder
 
+*[English version](README.en.md)*
+
 Un **skill pour Claude** qui construit, analyse et améliore des decks **Magic: The Gathering Commander (EDH)** de 100 cartes, en papier : listes vérifiées (légalité, bracket, combos, prix) et prêtes à importer dans deckstats.net, ManaBox, Moxfield ou Archidekt, puis notes de jeu.
 
 ## Installer
@@ -22,7 +24,7 @@ Dis **« fais la mise à jour EDH »** : Claude vérifie ici s'il existe une nou
 - [Mode d'emploi](edh-deck-builder/docs/MODE_EMPLOI.md)
 - [Documentation de développement](edh-deck-builder/docs/DOC_DEV.md)
 
-La documentation est en français ; une version anglaise est prévue. Le skill répond en français ou en anglais.
+La documentation existe en français et en anglais (sauf la documentation de développement, en français). Le skill répond en français ou en anglais.
 
 ## Mentions
 

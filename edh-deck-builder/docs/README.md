@@ -1,5 +1,7 @@
 # edh-deck-builder
 
+*[English version](README.en.md)*
+
 *Documentation validée le 31 octobre 2026, revue le 1er novembre 2026 (réglages par défaut neutres), mise à jour avec chaque version du skill.*
 
 Un skill pour Claude qui construit, analyse et améliore des decks Magic: The Gathering au format **EDH / Commander**, pour des joueurs en papier qui veulent des decks solides et cohérents sans y passer des heures, directement importables dans deckstats.net, ManaBox, Moxfield ou Archidekt.
@@ -27,7 +29,7 @@ Et un principe de méthode : **rien n'est affirmé de mémoire quand on peut le 
 
 ## Ce qu'il faut pour l'utiliser
 
-- Claude avec les skills, **l'exécution de code** activée et **l'accès réseau** à `api.scryfall.com` et `backend.commanderspellbook.com` (voir le mode d'emploi, section 1).
+- Claude avec les skills, **l'exécution de code** activée et **l'accès réseau** à `api.scryfall.com`, `backend.commanderspellbook.com` et, pour les mises à jour, aux domaines de GitHub (voir le mode d'emploi, section 1).
 - Pour la collection : l'application **ManaBox** et son export CSV. Pour les listes : un compte **deckstats.net**, **Moxfield** ou **Archidekt**, ou l'application ManaBox (facultatif, la liste reste lisible telle quelle).
 
 ## Ce que le skill sait faire
@@ -52,11 +54,10 @@ Et un principe de méthode : **rien n'est affirmé de mémoire quand on peut le 
 - Il ne lit pas un lien deckstats (le site bloque les lecteurs automatiques) : il faut coller l'export.
 - Il ne se connecte pas à ManaBox (pas d'API publique) : il faut joindre l'export CSV.
 - Il ne cherche pas dans quel deck se trouvent tes cartes : une carte possédée une fois compte pour tous tes decks, l'autre exemplaire pouvant être un proxy.
-- Il parle **français** ou **anglais**, au choix dans le profil (et il répond dans la langue de tes phrases si tu changes de langue) ; les noms de cartes restent en anglais. La documentation n'existe pour l'instant qu'en français. Les prix sont en **euros** (Cardmarket) ou en **dollars** (TCGplayer), au choix dans le profil : ce sont les deux devises que fournit Scryfall, sans conversion vers d'autres. Les listes s'importent dans deckstats, ManaBox, Moxfield et Archidekt ; d'autres outils viendront quand leur import aura été testé. Pour la collection, seul l'export ManaBox est lu.
+- Il parle **français** ou **anglais**, au choix dans le profil (et il répond dans la langue de tes phrases si tu changes de langue) ; les noms de cartes restent en anglais. La documentation existe en français et en anglais, sauf la documentation développeur (en français). Les prix sont en **euros** (Cardmarket) ou en **dollars** (TCGplayer), au choix dans le profil : ce sont les deux devises que fournit Scryfall, sans conversion vers d'autres. Les listes s'importent dans deckstats, ManaBox, Moxfield et Archidekt ; d'autres outils viendront quand leur import aura été testé. Pour la collection, seul l'export ManaBox est lu.
 - Il ne remplace pas ton jugement : il propose, tu valides.
 
 ## Pour aller plus loin
 
 - **[Mode d'emploi](MODE_EMPLOI.md)** : installer le skill et s'en servir au quotidien.
 - **[Documentation développeur](DOC_DEV.md)** : architecture, scripts, règles validées et tests.
-- **`A_FAIRE.md`** (à la racine du skill) : les chantiers en cours.

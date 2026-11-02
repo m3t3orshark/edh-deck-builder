@@ -1,5 +1,7 @@
 # Installer le skill EDH dans Claude
 
+*[English version](INSTALLATION.en.md)*
+
 Compte une dizaine de minutes, une seule fois. Il te faut un compte Claude, sur ordinateur (claude.ai dans le navigateur, ou l'application Claude pour Mac ou Windows). Les réglages et l'installation se font sur ordinateur.
 
 Un skill, c'est un ensemble d'instructions et d'outils que Claude utilise tout seul quand ta demande le concerne. Celui-ci s'occupe des decks Magic Commander : il les construit, les analyse, vérifie les cartes sur Scryfall et prépare des listes à importer dans deckstats, ManaBox, Moxfield ou Archidekt.

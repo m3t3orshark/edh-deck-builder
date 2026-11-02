@@ -1,6 +1,6 @@
 # Mode d'emploi
 
-*Validée le 31 octobre 2026, revue le 1er novembre 2026, mise à jour avec chaque version du skill.* Ce guide permet de démarrer seul, sans connaître l'historique du skill.
+*[English version](MODE_EMPLOI.en.md)* · *Validée le 31 octobre 2026, revue le 1er novembre 2026, mise à jour avec chaque version du skill.* Ce guide permet de démarrer seul, sans connaître l'historique du skill.
 
 ## 1. Installer le skill
 
