@@ -13,7 +13,7 @@ Lis `PROFIL.md` au début de chaque séance. Il contient les préférences de la
 
 **Langue des réponses** : celle du profil (`langue` : `fr` ou `en` ; absente, `fr`), pour tout ce que tu écris, notes de jeu et accueil compris. Si la personne **rédige ses propres phrases** dans l'autre langue, réponds dans la langue de ces phrases. Ne comptent pas pour décider : les noms de cartes, une liste collée, un texte de carte, un message d'erreur, une citation. Dans le doute (un message fait surtout de noms de cartes), garde la langue du profil. Une demande explicite (« réponds en anglais ») prime. Les instructions du skill et les sorties des scripts sont en français : ce sont des outils de travail ; traduis ce que tu en reprends, y compris les formules fixes des modules (« Sort : X → Entre : Y » devient « Out: X → In: Y », « Stratégie en bref » devient « Strategy at a glance »…). Les mots-clés du format d'import (`Sideboard`, `Commander`) ne se traduisent jamais. Le ton (tutoiement ou vouvoiement) ne s'applique qu'en français.
 
-**Première utilisation** : si `proprietaire` est vide (`null`) dans le profil, le skill n'a pas encore été réglé. Avant toute autre chose, souhaite la bienvenue en trois phrases courtes, dans la langue du premier message de la personne (mêmes critères que ci-dessus ; dans le doute, en français) : ce que fait le skill, que ses réglages se font une fois pour toutes en une minute, et qu'il suffit de dire « aide » à tout moment pour voir ce qu'il sait faire. Puis suis `modes/reglages.md` pour afficher le panneau, dans cette même langue. Si la personne préfère commencer tout de suite, applique les valeurs neutres du profil vierge et propose de régler plus tard.
+**Première utilisation** : si `proprietaire` est vide (`null`) dans le profil, le skill n'a pas encore été réglé. Avant toute autre chose, souhaite la bienvenue en trois phrases courtes, dans la langue du premier message de la personne (mêmes critères que ci-dessus ; dans le doute, en français) : ce que fait le skill, que ses réglages se font une fois pour toutes en une minute, et qu'il suffit de dire « aide EDH » à tout moment pour voir ce qu'il sait faire. Puis suis `modes/reglages.md` pour afficher le panneau, dans cette même langue. Si la personne préfère commencer tout de suite, applique les valeurs neutres du profil vierge et propose de régler plus tard.
 
 ## Règles qui ne changent jamais
 
@@ -45,8 +45,10 @@ Lis seulement le module qui correspond à la demande (plusieurs si elle en combi
 | Toutes les cartes qui servent un commandant, par synergie | `modes/exploration.md` |
 | Un thème ou une mécanique : quels commandants ? | `modes/commandants.md` |
 | Un export ManaBox joint, « avec mes cartes », ou « qu'est-ce que j'ai déjà ? » sur une liste | `modes/collection.md` |
-| Voir, modifier ou exporter ses réglages ; mettre à jour le skill, avec un fichier `.skill` joint ou sans (« fais la mise à jour de edh-deck-builder ») | `modes/reglages.md` |
-| « Aide », « que sais-tu faire ? », la liste des commandes | `reference/commandes.md` |
+| Voir, modifier ou exporter ses réglages ; mettre à jour le skill, avec un fichier `.skill` joint ou sans (« fais la mise à jour EDH ») | `modes/reglages.md` |
+| « Aide EDH », « que sais-tu faire ? », la liste des commandes | `reference/commandes.md` |
+
+**Plusieurs skills EDH** : les commandes d'entretien se disent avec « EDH » (« aide EDH », « règle mon profil EDH », « fais la mise à jour EDH »). Si un autre skill installé pourrait aussi répondre à une telle demande, demande de quel skill il s'agit avant d'agir. Les formes courtes (« aide », « règle mon profil ») restent comprises quand la conversation porte déjà sur Magic.
 | Une question de règles ou d'interaction entre cartes | Pas de module : lance `card_texts.py` sur les cartes nommées (une liste d'une ligne par carte suffit), puis consulte leurs rulings sur Scryfall si besoin ; réponds en citant le texte Oracle exact |
 
 Références communes, à lire quand un module y renvoie : `reference/verification.md` (contrôles avant livraison), `reference/format_import.md` (format de la liste, testé dans deckstats, ManaBox, Moxfield et Archidekt), `reference/puissance.md` (niveau de puissance sur 10).

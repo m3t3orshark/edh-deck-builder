@@ -42,7 +42,7 @@ Et un principe de méthode : **rien n'est affirmé de mémoire quand on peut le 
 | Explorer les synergies | Toutes les cartes qui servent un commandant, par axe, sans filtre de popularité, avec les pépites peu jouées |
 | Trouver un commandant | À partir d'un thème ou d'une mécanique, 10 commandants expliqués (et les écartés, avec la raison), d'autres séries sur demande |
 | Niveau de puissance | Une note sur 10 en plus du bracket, fondée sur six critères nommés |
-| Aide | « Aide » affiche la liste des demandes possibles, avec un exemple pour chacune |
+| Aide | « Aide EDH » affiche la liste des demandes possibles, avec un exemple pour chacune |
 | Réglages | Un panneau visuel pour tes préférences, enregistré d'un clic ; mise à jour vers une nouvelle version sans perdre ton profil ; export du profil en une ligne |
 | Notes de jeu | Plan de jeu, main de départ, synergies, pièges de règles, combos à éviter |
 | Collection ManaBox | Uniquement mes cartes, en priorité mes cartes, ou meilleur deck puis bilan des achats ; sur demande, comparaison de n'importe quelle liste avec ta collection (possédées, en proxy seulement, à acquérir) |

@@ -1,5 +1,10 @@
 # Nouveautés
 
+## 2026.11.02.4
+
+- Les commandes d'entretien se disent avec « EDH », pour éviter toute confusion quand plusieurs skills sont installés : « aide EDH », « règle mon profil EDH », « exporte mon profil EDH », « y a-t-il une mise à jour EDH ? », « fais la mise à jour EDH ».
+- Si un autre skill pourrait aussi répondre, Claude demande lequel avant d'agir.
+
 ## 2026.11.02.3 : première version publique
 
 - Construit, analyse et améliore des decks Commander de 100 cartes, avec vérification par Scryfall (légalité, ban list, identité couleur, Game Changers, prix) et Commander Spellbook (combos).

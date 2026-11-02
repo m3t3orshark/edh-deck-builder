@@ -14,15 +14,15 @@
 
 Un domaine ajouté peut mettre quelques messages à fonctionner. Si Claude indique que Scryfall est injoignable, ouvre une nouvelle conversation.
 
-**Passer à une nouvelle version sans perdre tes réglages** : n'installe pas directement le fichier reçu, car installer un fichier `.skill` remplace tout le skill, profil compris. Joins-le plutôt à une conversation et écris « mets à jour mon skill avec ce fichier ». Claude reporte ton profil dans la nouvelle version, te dit quels réglages sont gardés et lesquels sont nouveaux, et te présente un seul fichier à installer. Une version que Claude a reconstruite pour toi (après « règle mon profil ») contient déjà ton profil : celle-là s'installe directement. Après une installation, ouvre une nouvelle conversation.
+**Passer à une nouvelle version sans perdre tes réglages** : n'installe pas directement le fichier reçu, car installer un fichier `.skill` remplace tout le skill, profil compris. Joins-le plutôt à une conversation et écris « mets à jour mon skill avec ce fichier ». Claude reporte ton profil dans la nouvelle version, te dit quels réglages sont gardés et lesquels sont nouveaux, et te présente un seul fichier à installer. Une version que Claude a reconstruite pour toi (après « règle mon profil EDH ») contient déjà ton profil : celle-là s'installe directement. Après une installation, ouvre une nouvelle conversation.
 
-**Le plus simple** : dis « fais la mise à jour de edh-deck-builder ». Claude vérifie sur le dépôt officiel s'il existe une nouvelle version ; s'il y en a une, il te résume les nouveautés, la télécharge, vérifie qu'elle n'a pas été altérée, y reporte ton profil, et te présente la carte à installer d'un clic. « Y a-t-il une mise à jour ? » vérifie seulement. Il faut avoir autorisé les domaines de GitHub (ci-dessus).
+**Le plus simple** : dis « fais la mise à jour EDH ». Claude vérifie sur le dépôt officiel s'il existe une nouvelle version ; s'il y en a une, il te résume les nouveautés, la télécharge, vérifie qu'elle n'a pas été altérée, y reporte ton profil, et te présente la carte à installer d'un clic. « Y a-t-il une mise à jour EDH ? » vérifie seulement. Il faut avoir autorisé les domaines de GitHub (ci-dessus).
 
-**Sauvegarde de secours** : « exporte mon profil » te donne une ligne à conserver. La recoller dans une conversation recrée ton profil sur n'importe quelle version.
+**Sauvegarde de secours** : « exporte mon profil EDH » te donne une ligne à conserver. La recoller dans une conversation recrée ton profil sur n'importe quelle version.
 
 ## 1 bis. Ce que tu peux demander
 
-À tout moment, dis **« aide »** : Claude affiche la liste des demandes possibles, avec un exemple pour chacune. Ce sont des exemples à reprendre ou à adapter, une demande formulée librement fonctionne aussi :
+À tout moment, dis **« aide EDH »** : Claude affiche la liste des demandes possibles, avec un exemple pour chacune. Ce sont des exemples à reprendre ou à adapter, une demande formulée librement fonctionne aussi :
 
 | Pour… | Exemple à dire |
 |---|---|
@@ -33,9 +33,9 @@ Un domaine ajouté peut mettre quelques messages à fonctionner. Si Claude indiq
 | Améliorer un precon | « Améliore seulement la base de mana, 10 échanges maximum » |
 | Utiliser ma collection | « Seulement avec mes cartes » (avec l'export ManaBox) ; « Fais le bilan de ma collection pour ce deck » |
 | Jouer | « Prépare les notes de jeu » ; « Est-ce que [carte] se déclenche avec [carte] ? » |
-| Mes réglages | « Règle mon profil » ; « Exporte mon profil » |
-| Entretien | « Y a-t-il une mise à jour ? » ; « Fais la mise à jour de edh-deck-builder » ; « Mets à jour mon skill avec ce fichier » ; « Prépare une copie vierge à partager » |
-| Cette liste | « Aide » |
+| Mes réglages | « Règle mon profil EDH » ; « Exporte mon profil EDH » |
+| Entretien | « Y a-t-il une mise à jour EDH ? » ; « Fais la mise à jour EDH » ; « Mets à jour mon skill avec ce fichier » ; « Prépare une copie vierge à partager » |
+| Cette liste | « Aide EDH » |
 
 ## 2. Première utilisation
 
@@ -55,9 +55,9 @@ Le skill que tu reçois peut être **vierge** (personne ne l'a encore réglé) o
 3. **Tu cliques sur « Enregistrer »** : Claude prépare ta version du skill et te présente le fichier.
 4. **Tu cliques sur le bouton d'enregistrement du fichier** : ton skill est réglé. Ouvre ensuite une nouvelle conversation pour qu'il soit pris en compte.
 
-Tu es pressé ? Dis-le, et Claude commence tout de suite avec les valeurs neutres (règles officielles du bracket pour les combos et les verrous, pas de budget, base de mana réduite aux terrains, bracket demandé à chaque deck) ; il te proposera de régler ton profil plus tard. Et tu pourras toujours tout changer avec « règle mon profil ».
+Tu es pressé ? Dis-le, et Claude commence tout de suite avec les valeurs neutres (règles officielles du bracket pour les combos et les verrous, pas de budget, base de mana réduite aux terrains, bracket demandé à chaque deck) ; il te proposera de régler ton profil plus tard. Et tu pourras toujours tout changer avec « règle mon profil EDH ».
 
-**Avec un skill déjà réglé**, il n'y a pas d'accueil : Claude utilise directement le profil. Vérifie quand même une fois tes réglages avec « règle mon profil ».
+**Avec un skill déjà réglé**, il n'y a pas d'accueil : Claude utilise directement le profil. Vérifie quand même une fois tes réglages avec « règle mon profil EDH ».
 
 **Pour partager le skill** avec quelqu'un, demande « prépare une copie vierge à partager » : Claude produit une version sans tes réglages ni ton prénom, et la personne aura l'accueil ci-dessus. Ne lui envoie pas ta propre copie : elle contient ton profil. Et n'installe pas la copie vierge sur ton propre compte : elle remplacerait ton profil.
 
@@ -174,7 +174,7 @@ Les **listes** ManaBox (comme une liste d'envies) sont ignorées : ce ne sont pa
 
 ## 10. Tes réglages
 
-Dis « règle mon profil » : Claude affiche un panneau avec tes réglages (langue, ton, principes de jeu, bracket et puissance par défaut, budget, pistes inhabituelles, classeurs ManaBox, proxies comptés ou non, ce que comprend la base de mana, devise et seuil de prix). Modifie, clique sur « Enregistrer » : Claude reconstruit le skill avec ton nouveau profil et te présente le fichier ; clique sur son bouton d'enregistrement pour mettre ton skill à jour. Tu peux aussi le demander par écrit (« passe ma puissance par défaut à 6 »). Si tu enregistres sans rien avoir changé, Claude te le dit et ne reconstruit rien : ton skill installé est déjà à jour.
+Dis « règle mon profil EDH » : Claude affiche un panneau avec tes réglages (langue, ton, principes de jeu, bracket et puissance par défaut, budget, pistes inhabituelles, classeurs ManaBox, proxies comptés ou non, ce que comprend la base de mana, devise et seuil de prix). Modifie, clique sur « Enregistrer » : Claude reconstruit le skill avec ton nouveau profil et te présente le fichier ; clique sur son bouton d'enregistrement pour mettre ton skill à jour. Tu peux aussi le demander par écrit (« passe ma puissance par défaut à 6 »). Si tu enregistres sans rien avoir changé, Claude te le dit et ne reconstruit rien : ton skill installé est déjà à jour.
 
 **La langue** : Claude répond dans la langue de ton profil. Si tu écris tes propres phrases dans l'autre langue, il te répond dans celle-ci ; un nom de carte, une liste ou un texte de carte cité en anglais ne compte pas. Tu peux aussi le demander (« réponds en anglais »).
 

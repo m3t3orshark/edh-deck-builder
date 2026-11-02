@@ -11,11 +11,11 @@ Un **skill pour Claude** qui construit, analyse et améliore des decks **Magic: 
 
 ## Utiliser
 
-Dis **« aide »** à tout moment pour voir ce que le skill sait faire. Le [mode d'emploi](edh-deck-builder/docs/MODE_EMPLOI.md) détaille tout.
+Dis **« aide EDH »** à tout moment pour voir ce que le skill sait faire. Le [mode d'emploi](edh-deck-builder/docs/MODE_EMPLOI.md) détaille tout.
 
 ## Mettre à jour
 
-Dis **« fais la mise à jour de edh-deck-builder »** : Claude vérifie ici s'il existe une nouvelle version, te résume les nouveautés, vérifie le fichier, garde tes réglages et te présente la mise à jour à installer d'un clic. Les nouveautés de chaque version sont dans [CHANGELOG.md](CHANGELOG.md).
+Dis **« fais la mise à jour EDH »** : Claude vérifie ici s'il existe une nouvelle version, te résume les nouveautés, vérifie le fichier, garde tes réglages et te présente la mise à jour à installer d'un clic. Les nouveautés de chaque version sont dans [CHANGELOG.md](CHANGELOG.md).
 
 ## Documentation
 
