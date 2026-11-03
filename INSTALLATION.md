@@ -29,7 +29,7 @@ Ne télécharge pas les autres fichiers de la liste (`.sha256`, *Source code*) :
 
 ## Étape 3 : l'installer dans Claude
 
-1. Dans Claude, ouvre **Personnaliser**, puis **Skills**.
+1. Dans Claude, ouvre **Paramètres**, puis **Skills** (rubrique *Personnalisation*).
 2. Clique sur **+** (ou **Ajouter**) et choisis d'importer un skill.
 3. Sélectionne le fichier `edh-deck-builder.skill` de tes Téléchargements.
 4. Vérifie que le skill **edh-deck-builder** apparaît dans la liste et qu'il est activé.
@@ -72,5 +72,5 @@ N'installe jamais à la main un fichier `.skill` reçu de quelqu'un : il remplac
 | --- | --- |
 | Claude dit que Scryfall, Commander Spellbook ou GitHub est injoignable | Vérifie les domaines de l'étape 1, puis ouvre une nouvelle conversation |
 | Claude répond sans utiliser le skill | Vérifie qu'edh-deck-builder est activé (étape 3) et nomme ta demande : « aide EDH », « deck Commander » |
-| Tu as perdu tes réglages | Dis « règle mon profil EDH » et refais-les ; pour les sauvegarder, « exporte mon profil EDH » donne une ligne à garder |
+| Tu as perdu tes réglages | Dans **Paramètres → Skills → edh-deck-builder**, onglet **Contenu** : choisis dans le menu une version d'avant la perte, télécharge-la (flèche ↓), puis **« ··· » → Remplacer** avec ce fichier ; dis ensuite « fais la mise à jour EDH ». Sinon, « règle mon profil EDH » pour les refaire. Pour les sauvegarder à l'avance : « exporte mon profil EDH » |
 | Autre chose | Signale le problème dans l'onglet [Issues](https://github.com/m3t3orshark/edh-deck-builder/issues) du dépôt, avec une capture d'écran |

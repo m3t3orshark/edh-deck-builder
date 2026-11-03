@@ -29,7 +29,7 @@ Don't download the other files in the list (`.sha256`, *Source code*): they are 
 
 ## Step 3: install it in Claude
 
-1. In Claude, open **Customize**, then **Skills**.
+1. In Claude, open **Settings**, then **Skills** (*Customize* section).
 2. Click **+** (or **Add**) and choose to import a skill.
 3. Select the `edh-deck-builder.skill` file from your Downloads.
 4. Check that the **edh-deck-builder** skill appears in the list and is turned on.
@@ -72,5 +72,5 @@ Never install by hand a `.skill` file received from someone: it would replace yo
 | --- | --- |
 | Claude says Scryfall, Commander Spellbook or GitHub cannot be reached | Check the domains from step 1, then open a new conversation |
 | Claude answers without using the skill | Check that edh-deck-builder is turned on (step 3) and name your request: "help EDH", "Commander deck" |
-| You lost your settings | Say "set my EDH profile" and set them again; to back them up, "export my EDH profile" gives you one line to keep |
+| You lost your settings | In **Settings → Skills → edh-deck-builder**, **Content** tab: pick a version from before the loss in the menu, download it (↓ arrow), then **"···" → Replace** with that file; then say "update EDH". Otherwise, "set my EDH profile" to set them again. To back them up beforehand: "export my EDH profile" |
 | Anything else | Report the problem in the repository's [Issues](https://github.com/m3t3orshark/edh-deck-builder/issues) tab, with a screenshot |
